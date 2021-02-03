@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "siphon-reservation-manager-dev"
+    "default": "siphon-reservation-manager-dev",
+    "production": "gamoyon-reservation-c5cae"
   }
 }
