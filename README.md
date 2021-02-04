@@ -13,8 +13,17 @@ npm i -g firebase-tools
 # Download emulator
 firebase init emulators
 
-# Run local server
+# Install packages
 cd ./functions
+npm install
+
+# Set email account
+ex) Gmail account configuration
+firebase functions:config:set gmail.email="my-email@email.com"
+firebase functions:config:set gmail.password="mypassword"
+firebase functions.config:get
+
+# Run local server
 npm run serve
 ```
 
