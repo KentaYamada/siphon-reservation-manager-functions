@@ -6,10 +6,11 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "google",
+    "prettier",
+    "prettier/@typescript-eslint"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -22,8 +23,10 @@ module.exports = {
   plugins: [
     "@typescript-eslint",
     "import",
+    "prettier"
   ],
   rules: {
     quotes: ["error", "double"],
+    "import/prefer-default-export": "off"
   },
 };
