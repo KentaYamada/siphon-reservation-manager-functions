@@ -20,10 +20,11 @@ export class GmailService {
 
   /**
    * Send email
-   * @param {Mail.Options} transmissionData
+   *
+   * @param {Mail.Options} payload
    * @returns {Promise<any>}
    */
-  static send(transmissionData: Mail.Options): Promise<any> {
+  static send(payload: Mail.Options): Promise<nodemailer.SentMessageInfo> {
     const connection: SMTPConnection.Options = {
       host: "smtp.gmail.com",
       port: 465,
@@ -35,6 +36,6 @@ export class GmailService {
     };
     const transport = nodemailer.createTransport(connection);
 
-    return transport.sendMail(transmissionData);
+    return transport.sendMail(payload);
   }
 }
