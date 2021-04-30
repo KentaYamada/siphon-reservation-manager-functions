@@ -2,7 +2,7 @@
   "name": "functions",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
-    "build": "tsc",
+    "build": "tsc --project tsconfig.build.json",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
@@ -18,7 +18,8 @@
     "cors": "^2.8.5",
     "firebase-admin": "^9.4.2",
     "firebase-functions": "^3.13.1",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "nodemailer": "^6.4.17"
   },
   "devDependencies": {
     "@types/cors": "^2.8.9",
